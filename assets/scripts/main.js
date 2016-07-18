@@ -75,3 +75,67 @@
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+/*************************************************************************************
+** Side menu script
+*************************************************************************************/
+jQuery(document).ready(function() {   
+    var sideslider = jQuery('[data-toggle=collapse-side]');
+    var sel = sideslider.attr('data-target');
+    var sel2 = sideslider.attr('data-target-2');
+    sideslider.click(function(event){
+        jQuery(sel).toggleClass('in');
+        jQuery(sel2).toggleClass('out');
+    });
+});
+/*************************************************************************************
+** Show menu when scroll up
+*************************************************************************************/
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = jQuery('header').outerHeight();
+
+jQuery(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = jQuery(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        jQuery('header').removeClass('nav-down').addClass('nav-up');
+        jQuery('.side-collapse').addClass('in');
+        jQuery('.pull-right').removeClass('open');
+    } else {
+        // Scroll Up
+        if(st + jQuery(window).height() < jQuery(document).height()) {
+            jQuery('header').removeClass('nav-up').addClass('nav-down');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+/*************************************************************************************
+** Side menu toggle icon
+*************************************************************************************/
+jQuery(document).ready(function(){
+  jQuery('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function(){
+    jQuery(this).toggleClass('open');
+  });
+});
