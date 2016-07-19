@@ -106,7 +106,7 @@ setInterval(function() {
         hasScrolled();
         didScroll = false;
     }
-}, 250);
+}, 100);
 
 function hasScrolled() {
     var st = jQuery(this).scrollTop();
@@ -122,15 +122,25 @@ function hasScrolled() {
         jQuery('header').removeClass('nav-down').addClass('nav-up');
         jQuery('.side-collapse').addClass('in');
         jQuery('.pull-right').removeClass('open');
+
     } else {
         // Scroll Up
         if(st + jQuery(window).height() < jQuery(document).height()) {
             jQuery('header').removeClass('nav-up').addClass('nav-down');
-        }
+            if (st > navbarHeight) {
+              jQuery('header').addClass('nav-reposition');  
+            }  
+        } 
     }
     
     lastScrollTop = st;
 }
+
+jQuery(window).scroll(function() {
+   if(jQuery(window).scrollTop() == 0) {
+       jQuery('header').removeClass('nav-reposition');
+   }
+});
 /*************************************************************************************
 ** Side menu toggle icon
 *************************************************************************************/
