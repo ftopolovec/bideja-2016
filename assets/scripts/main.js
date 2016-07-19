@@ -117,7 +117,7 @@ function hasScrolled() {
     
     // If they scrolled down and are past the navbar, add class .nav-up.
     // This is necessary so you never see what is "behind" the navbar.
-    if (st > lastScrollTop && st > navbarHeight){
+    if (st > lastScrollTop && st > (navbarHeight - 80)){
         // Scroll Down
         jQuery('header').removeClass('nav-down').addClass('nav-up');
         jQuery('.side-collapse').addClass('in');
@@ -128,18 +128,24 @@ function hasScrolled() {
         if(st + jQuery(window).height() < jQuery(document).height()) {
             jQuery('header').removeClass('nav-up').addClass('nav-down');
             if (st > navbarHeight) {
-              jQuery('header').addClass('nav-reposition');  
+              jQuery('header').addClass('nav-reposition'); 
+              jQuery('.side-collapse').css('top', '100px'); 
             }  
         } 
     }
-    
+   
     lastScrollTop = st;
 }
 
 jQuery(window).scroll(function() {
    if(jQuery(window).scrollTop() == 0) {
        jQuery('header').removeClass('nav-reposition');
-   }
+       jQuery('.side-collapse').css('top', '140px');
+   } 
+});
+
+jQuery(document).ready(function(){
+  jQuery('.side-collapse').css('top', '140px');
 });
 /*************************************************************************************
 ** Side menu toggle icon
