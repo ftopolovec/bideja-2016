@@ -17,7 +17,7 @@
 .navbar-inverse .navbar-toggle { margin-top:25px; margin-left:20px; border: solid 0px #fff;}
 .navbar-inverse .navbar-toggle:hover { background-color:transparent; }
 
-header {
+header { 
     background: #fff;
     padding-top:12px;
     position: fixed;
@@ -78,3 +78,45 @@ header {
 .bg-blue {
   background: $dark-blue;
 }
+.slogan { 
+  color:#cacaca; 
+  padding:12px;
+  font-size:14px;
+}
+.slogan span { color:#fff; text-decoration: underline;}
+.fa-list span { 
+  color:#fff; 
+  font-family: FontAwesome; 
+  padding-right:10px; 
+}
+.header-top-contact { padding:12px; }
+.header-top-contact li { 
+  display: inline; 
+  color:#cacaca; 
+  padding-right:20px;
+  font-size:14px;
+}
+.header-top-social, .header-top-cta { padding:0px; }
+.header-top-social li { 
+  height:46px;
+  border-left:solid 1px $saturate-blue; 
+  border-right:solid 1px $saturate-blue;
+  padding: 12px 10px 0px 15px;
+  list-style: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.header-top-social li:hover { background: $blue-link; }
+.header-top-social li a:hover { text-decoration: none; }
+
+.header-top-cta li { 
+  height:46px;
+  padding: 12px 10px 0px 15px;
+  background: $green;
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  color:#fff;
+  transition: all 0.3s ease; 
+}
+.header-top-cta.fa-list span{ padding-left: 10px; }

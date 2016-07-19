@@ -1,5 +1,24 @@
-<div class="container-fluid">
-  <div class="col-md-12 bg-blue header-top"></div>
+<div class="container-fluid bg-blue header-top">
+  <div class="container ">
+    <div class="col-md-2 slogan"><p>Samo trenutak, evo <span>ideje!</span></p></div>  
+    <div class="col-md-6 col-md-offset-1">
+      <ul class="fa-list header-top-contact">
+        <li><span></span>+385 95 910 9102 – Mladen</li>
+        <li><span></span>+385 91 186 5265 – Josip</li>
+      </ul>
+    </div>
+    <div class="col-md-1 no-padding">
+      <ul class="header-top-social fa-list">
+        <a href="https://www.facebook.com/burza.ideja/?fref=ts" target="_blank"><li><span></span></li></a>
+      </ul>
+    </div>
+    <div class="col-md-2 no-padding">
+      <ul class="header-top-cta fa-list">
+        <a href="#" target="_blank"><li>Zatražite ponudu<span></span></li></a>
+      </ul>
+    </div>
+  </div>
+</div>
   <div class="container">
   <header role="banner" class="navbar navbar-fixed-top navbar-inverse nav-down">
     <div class="container">
@@ -26,4 +45,3 @@
     </div>
   </header>
   </div>
-</div>
