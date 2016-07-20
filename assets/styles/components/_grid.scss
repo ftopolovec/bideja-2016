@@ -1,5 +1,7 @@
 // Grid system
 .main {
+	padding-left:0px !important;
+	padding-right:0px !important;
   @include make-sm-column($main-sm-columns);
   .sidebar-primary & {
     @include make-sm-column($main-sm-columns - $sidebar-sm-columns);

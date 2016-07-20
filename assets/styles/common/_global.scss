@@ -3,3 +3,7 @@ body {
   position: relative;
 }
 .no-padding { padding:0px; }
+.top-marg-50 { margin-top:50px;}
+@media screen and (max-width: 768px) {
+	#owl-example { display: none; } 
+}

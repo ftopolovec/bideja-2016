@@ -107,7 +107,8 @@ header {
   transition: all 0.3s ease;
 }
 .header-top-social li:hover { background: $blue-link; }
-.header-top-social li a:hover { text-decoration: none; }
+.header-top-social li a:hover,
+.header-top-cta li a:hover { text-decoration: none !important; } 
 
 .header-top-cta li { 
   height:46px;
@@ -120,3 +121,11 @@ header {
   transition: all 0.3s ease; 
 }
 .header-top-cta.fa-list span{ padding-left: 10px; }
+/*********************************************************************
+ ** PRIVREMENO RJEŠENJE ZA PROBLEM S RESPONZIVNOSTI HEADER TOP
+ *********************************************************************/ 
+ @media screen and (max-width: 992px) {
+      .header-top-contact,
+      .header-top-social,
+      .header-top-cta { display: none; }
+  }

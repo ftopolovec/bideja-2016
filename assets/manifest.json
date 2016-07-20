@@ -2,13 +2,15 @@
   "dependencies": {
     "main.js": {
       "files": [
-        "scripts/main.js"
+        "scripts/main.js",
+        "scripts/owl/*"
       ],
       "main": true
     },
     "main.css": {
       "files": [
-        "styles/main.scss"
+        "styles/main.scss",
+        "styles/owl/*"
       ],
       "main": true
     },

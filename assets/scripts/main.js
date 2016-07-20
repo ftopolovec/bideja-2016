@@ -155,3 +155,9 @@ jQuery(document).ready(function(){
     jQuery(this).toggleClass('open');
   });
 });
+
+jQuery(document).ready(function() {
+  jQuery("#owl-example").owlCarousel({
+    singleItem:true 
+  });
+});

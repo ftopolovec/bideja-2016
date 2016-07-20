@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-2 no-padding">
       <ul class="header-top-cta fa-list">
-        <a href="#" target="_blank"><li>Zatražite ponudu<span></span></li></a>
+        <a href="#" target="_blank"><li>Zatražite ponudu<span></span></li></a>
       </ul>
     </div>
   </div>
