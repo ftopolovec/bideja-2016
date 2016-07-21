@@ -1,0 +1,91 @@
+/*********************************************************************
+ ** HOMEPAGE UNDER SLIDER
+ *********************************************************************/ 
+ .text-center { text-align: center; }
+ .bg-green { background: $green; }  
+ .bg-light-blue { color: $dark-blue; }
+ .bg-light-blue hr, .bg-blue hr { 
+ 	width:50px; 
+	border-width:2px;
+	border-color: $blue-link; 
+}
+ .bg-green h2, .bg-blue h2 { color:#fff; }
+ .bg-green h3 { 
+ 	color: $dark-green; 
+ 	font-family: 'Roboto', sans-serif;
+	font-size:18px;
+	font-weight:400;
+	line-height:28px;
+ }
+ .bg-blue h3 {
+ 	color: $saturate-blue; 
+ 	font-family: 'Roboto', sans-serif;
+	font-size:18px;
+	font-weight:400;
+	line-height:28px;
+ }
+ .bg-green hr, .bg-blue hr { 
+ 	width:50px; 
+	border-width:2px;
+	color:#fff; 
+}
+ .bg-blue { background: $dark-blue; }
+ .bg-light-blue { background: $light-blue; }   
+ .clients-wrapper img { 
+ 	filter: grayscale(100%);
+ 	transition:all 0.3s ease;
+} 
+ .clients-wrapper img:hover { filter: grayscale(0%);cursor: pointer; }                                                                       
+.project-box-bot { 
+	display:block;
+	padding-top:20px;
+	font-family: 'Roboto', sans-serif;
+	font-size:24px;
+	font-weight: 400;
+	color: $gray;
+	height:75px;
+	width:100%;
+	background:#fff;
+}
+.project-more-plus {
+	position: absolute;
+    right: 40px;
+    bottom: 46px;
+	display:block;
+	background: $blue-link;
+	border-radius: 50%;
+	width:56px;
+	height:56px;
+	color:#fff;
+	padding-top:12px;
+	font-family: FontAwesome;
+	font-size:24px;
+}
+.project-more-plus a:hover { text-decoration: none !important; color:#fff;} 
+.blog-headline { padding:0px; border-bottom:2px solid #fff; }
+.blog-headline li {
+	display:inline-block;
+	padding:10px;
+}
+.date-blog {
+	font-family: 'Roboto', sans-serif;
+	font-size:30px;
+	font-weight: bold;
+	color: $gray;
+	border-right:2px solid #fff;
+}
+.month-year-blog {
+	font-family: 'Roboto', sans-serif;
+	font-size:16px;
+	font-weight: 300;
+	color:#56758d;
+	text-align: center;
+}
+.bg-light-blue .fa-list { padding:0px; }
+.bg-light-blue .fa-list li { display:inline-block; padding-right:10px; }
+.bg-light-blue .fa-list li span { color: $blue-link; }
+.bg-light-blue p { 
+	padding-top:20px;
+	color: $dark-blue;
+	font-size:16px;
+}

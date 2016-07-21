@@ -1,0 +1,38 @@
+footer h3 { 
+	color: #fff !important;
+	font-size: 22px !important;
+}
+footer p { 
+	color: $saturate-blue;
+	font-size:16px;
+}
+footer span {
+	font-family: FontAwesome;
+	color:#fff;
+}
+footer input.form-control { 
+	border-radius: 0px;
+	height:46px;
+}
+footer button.btn-default { 
+	border-radius: 0px;
+	border:0px solid #fff;
+	height:46px;
+	text-transform: uppercase;
+	color:#fff;
+	background: $red;
+	font-family: 'Roboto', sans-serif; 
+	transition: all 0.3s ease;
+}
+footer button.btn-default:hover { 
+	background: $blue-link;
+	color:#fff;
+}
+.footer-separator { 
+	width:100% !important; 
+	border-width:1px !important;
+	border-color: #2e495f !important; 
+}
+.col-separator-footer {
+	border-left:1px solid #2e495f;
+}

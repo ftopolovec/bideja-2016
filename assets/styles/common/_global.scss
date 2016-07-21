@@ -2,8 +2,15 @@ body {
   padding-top: 100px;
   position: relative;
 }
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size:36px;
+	font-weight:300;
+}
+
 .no-padding { padding:0px; }
 .top-marg-50 { margin-top:50px;}
+.bottom-marg-50 { margin-bottom:50px;}
 @media screen and (max-width: 768px) {
 	#owl-example { display: none; } 
 }
