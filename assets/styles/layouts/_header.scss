@@ -11,9 +11,14 @@
     font-size:16px;
     display:inline-block; 
     text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
 }
-.nav>li:hover, .nav>li>a:hover { color: $gray !important; }
-.nav>li.current-menu-item a { color: #ec5646; }
+
+.nav>li:hover, .nav>li>a:hover, .nav>li>a:focus { 
+  color: $red !important;
+  background: transparent;
+}
+.nav>li.current-menu-item a { color: $red; }
 .navbar-inverse .navbar-toggle .icon-bar { background-color: transparent; }
 .navbar-inverse .navbar-toggle { margin-top:25px; margin-left:20px; border: solid 0px #fff;}
 .navbar-inverse .navbar-toggle:hover { background-color:transparent; }
@@ -93,7 +98,7 @@ header {
   display: inline; 
   color:#cacaca;  
   padding-right:20px;
-  font-size:14px;
+  font-size:12px;
 }
 .header-top-social, .header-top-cta { padding:0px; }
 .header-top-social.fa-list:before, .header-top-cta.fa-list:before { display:none; }
@@ -114,10 +119,9 @@ header {
 .header-top-cta li { 
   height:46px;
   padding: 12px 10px 0px 15px;
-  background: $green;
+  background: $saturate-blue;
   list-style: none;
   text-align: center;
-  text-transform: uppercase;
   color:#fff;
   transition: all 0.3s ease; 
 }

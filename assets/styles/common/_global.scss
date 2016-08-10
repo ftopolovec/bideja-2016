@@ -27,13 +27,36 @@ a:hover {
 	color:$blue-link !important;
 	text-decoration: none !important;
 }
-.breadcrumb { margin-bottom:0px; }
-.breadcrumb-title { color:#545454; margin-top:10px;}
+#breadcrumbs { 
+	font-size:14px;
+	color: $saturate-blue;
+}
+.breadcrumb { 
+	margin-bottom:0px; 
+	text-align: center;
+	padding:50px 0px 50px 0px;
+	color:#fff;
+	border-radius:0px;
+}
+.breadcrumb p {
+	font-family: Raleway,sans-serif;
+	color: #fff; 
+	font-size:18px;
+	font-weight:400;
+	line-height:28px;
+}
+.breadcrumb-title { 
+	color:#fff; 
+	margin-top:10px;
+	text-transform: uppercase;
+	font-weight:bold;
+}
 .breadcrumb a { color:#00b4fa; }
 .no-padding { padding:0px; }
 .top-pad-50  { padding-top:50px; }
 .top-marg-50 { margin-top:50px;}
 .bottom-marg-50 { margin-bottom:50px;}
+.padding-50 { padding-top:50px !important; padding-bottom:50px; }
 @media screen and (max-width: 768px) {
 	#owl-example { display: none; } 
 	.m-bot-marg-50 { margin-bottom:50px; }

@@ -38,7 +38,7 @@ spremnih za poboljšanje vašeg poslovanja!</h3>
 		</div>
 	</div>
 </div>
-<div class="container-fluid bg-green">
+<div class="container-fluid bg-light-blue">
 	<div class="container top-marg-50 bottom-marg-50">
 		<div class="col-md-12 text-center">
 			<h2>Izradit ćemo Vam neobvezujuću ponudu!</h2>

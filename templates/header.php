@@ -3,8 +3,8 @@
     <div class="col-md-2 slogan"><p>Samo trenutak, evo <span>ideje!</span></p></div>  
     <div class="col-md-6 col-md-offset-1">
       <ul class="fa-list header-top-contact">
-        <li><i class="fa fa-phone" aria-hidden="true"></i>+385 95 910 9102 – Mladen</li>
-        <li><i class="fa fa-phone" aria-hidden="true"></i>+385 91 186 5265 – Josip</li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> +385 95 910 9102 – Mladen</li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i> +385 91 186 5265 – Josip</li>
       </ul>
     </div>
     <div class="col-md-1 no-padding">
