@@ -3,18 +3,18 @@
     <div class="col-md-2 slogan"><p>Samo trenutak, evo <span>ideje!</span></p></div>  
     <div class="col-md-6 col-md-offset-1">
       <ul class="fa-list header-top-contact">
-        <li><span></span>+385 95 910 9102 – Mladen</li>
-        <li><span></span>+385 91 186 5265 – Josip</li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i>+385 95 910 9102 – Mladen</li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i>+385 91 186 5265 – Josip</li>
       </ul>
     </div>
     <div class="col-md-1 no-padding">
       <ul class="header-top-social fa-list">
-        <a href="https://www.facebook.com/burza.ideja/?fref=ts" target="_blank"><li><span></span></li></a>
+        <a href="https://www.facebook.com/burza.ideja/?fref=ts" target="_blank"><li><i class="fa fa-facebook" aria-hidden="true"></i></li></a>
       </ul>
     </div>
     <div class="col-md-2 no-padding">
       <ul class="header-top-cta fa-list">
-        <a href="#" target="_blank"><li>Zatražite ponudu<span></span></li></a>
+        <a href="#" target="_blank"><li>Zatražite ponudu <i class="fa fa-paper-plane-o" aria-hidden="true"></i></li></a>
       </ul>
     </div>
   </div>

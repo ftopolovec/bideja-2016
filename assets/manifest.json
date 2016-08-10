@@ -10,7 +10,8 @@
     "main.css": {
       "files": [
         "styles/main.scss",
-        "styles/owl/*"
+        "styles/owl/*",
+        "styles/font-awesome/*"
       ],
       "main": true
     },

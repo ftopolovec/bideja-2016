@@ -28,7 +28,7 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'primary_navigation' => __('Primary Navigation', 'sage')
-  ]);
+    ]);
 
   // Enable post thumbnails
   // http://codex.wordpress.org/Post_Thumbnails
@@ -61,7 +61,7 @@ function widgets_init() {
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
-  ]);
+    ]);
 
   register_sidebar([
     'name'          => __('Footer', 'sage'),
@@ -70,7 +70,7 @@ function widgets_init() {
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
-  ]);
+    ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
@@ -85,8 +85,9 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
+    is_page(7),
     is_page_template('template-custom.php'),
-  ]);
+    ]);
 
   return apply_filters('sage/display_sidebar', $display);
 }
@@ -104,3 +105,39 @@ function assets() {
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+
+
+
+
+
+// PROJEKTI
+function ctp_projekti() {
+
+  $labels = array(
+    'name'                  => _x( 'Projekti', 'Post Type General Name', 'text_domain' ),
+    'singular_name'         => _x( 'Projekt', 'Post Type Singular Name', 'text_domain' )
+    );
+  $args = array(
+    'label'                 => __( 'Projekt', 'text_domain' ),
+    'labels'                => $labels,
+    'supports'              => array( 'title', 'editor', 'thumbnail', ),
+    'taxonomies'            => array( 'category', 'post_tag' ),
+    'hierarchical'          => false,
+    'public'                => true,
+    'show_ui'               => true,
+    'show_in_menu'          => true,
+    'menu_position'         => 5,
+    'show_in_admin_bar'     => true,
+    'show_in_nav_menus'     => true,
+    'can_export'            => true,
+    'has_archive'           => true,    
+    'exclude_from_search'   => false,
+    'publicly_queryable'    => true,
+    'capability_type'       => 'page',
+    );
+  register_post_type( 'projekti', $args );
+
+}
+add_action( 'init', __NAMESPACE__ . '\\ctp_projekti', 0 );

@@ -93,6 +93,7 @@
   font-size: 14px;
   font-weight:400;
   padding:15px;
+  margin-top:10px;
 }
 .hvr-icon-forward:before {
   content: "\f138";
@@ -113,4 +114,8 @@
   -webkit-transform: translateX(4px);
   transform: translateX(4px);
 }
-.hvr-icon-forward:hover { text-decoration: none !important; color:#fff; }
+.hvr-icon-forward:hover { 
+  text-decoration: none !important;
+  color:#fff !important;
+  background: $dark-red;
+}

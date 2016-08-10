@@ -7,7 +7,7 @@ footer p {
 	font-size:16px;
 }
 footer span {
-	font-family: FontAwesome;
+	font-family: 'Raleway', sans-serif;
 	color:#fff;
 }
 footer input.form-control { 
@@ -29,10 +29,19 @@ footer button.btn-default:hover {
 	color:#fff;
 }
 .footer-separator { 
-	width:100% !important; 
+	width:103.5% !important; 
 	border-width:1px !important;
 	border-color: #2e495f !important; 
 }
 .col-separator-footer {
 	border-left:1px solid #2e495f;
+	padding-left:50px;
+}
+.col-separator-footer:after {
+	content: '\f111';
+	font-family: FontAwesome;
+	color: $blue-link;
+	position: absolute;
+    left: -6px;
+    bottom: -10px;
 }

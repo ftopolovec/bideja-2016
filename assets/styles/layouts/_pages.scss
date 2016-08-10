@@ -9,17 +9,24 @@
 	border-width:2px;
 	border-color: $blue-link; 
 }
+.ukratko hr {
+	width:50px;
+	border-width: 2px;
+	border-color: $red;
+}
+.ukratko h3 { 
+	font-size:18px; 
+	line-height: 24px;
+}
  .bg-green h2, .bg-blue h2 { color:#fff; }
  .bg-green h3 { 
  	color: $dark-green; 
- 	font-family: 'Roboto', sans-serif;
 	font-size:18px;
 	font-weight:400;
 	line-height:28px;
  }
  .bg-blue h3 {
  	color: $saturate-blue; 
- 	font-family: 'Roboto', sans-serif;
 	font-size:18px;
 	font-weight:400;
 	line-height:28px;
@@ -30,7 +37,10 @@
 	color:#fff; 
 }
  .bg-blue { background: $dark-blue; }
+ .bg-blue .fa { color: #fff; } 
  .bg-light-blue { background: $light-blue; }   
+ .bg-light-blue .fa { color: $blue-link; }  
+ .bg-light-blue .fa-list:before { display:none; } 
  .clients-wrapper img { 
  	filter: grayscale(100%);
  	transition:all 0.3s ease;
@@ -60,8 +70,15 @@
 	padding-top:12px;
 	font-family: FontAwesome;
 	font-size:24px;
+	transform: rotate(0deg);
+	transition: all 1s ease;
 }
-.project-more-plus a:hover { text-decoration: none !important; color:#fff;} 
+.project-more-plus:hover { 
+	text-decoration: none !important; 
+	color:#fff !important;
+	transform: rotate(180deg); 
+} 
+
 .blog-headline { padding:0px; border-bottom:2px solid #fff; }
 .blog-headline li {
 	display:inline-block;
@@ -89,3 +106,27 @@
 	color: $dark-blue;
 	font-size:16px;
 }
+.services h3 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+}
+.services p {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+}
+.services a {
+	color: $gray;
+	font-family: 'Raleway', sans-serif;
+	font-size:16px;
+	font-weight: 400;
+}
+.services a:hover { color: $red !important; }
+
+/*********************************************************************
+ ** HOMEPAGE UNDER SLIDER - MOBILE
+ *********************************************************************/ 
+ @media screen and (max-width: 768px) {
+
+ }
