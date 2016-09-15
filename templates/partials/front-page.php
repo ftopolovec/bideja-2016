@@ -3,27 +3,31 @@
 	<div class="row services bot-marg-50 top-marg-50">
 		<div class="col-md-3 m-bot-marg-50" align="center">
 			<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/iws.jpg" alt="Izrada web stranica">
-			<h3>Izrada web stranica</h3>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge/izrada-web-stranica">
+			<h3>Izrada web stranica</h3></a>
 			<p>U izradi web stranica imamo višegodišnje iskustvo i preko stotinjak zadovoljnih klijenata.</p>
-			<a href="#">Saznaj više...</a>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge/izrada-web-stranica">Saznaj više...</a>
 		</div>
 		<div class="col-md-3 m-bot-marg-50" align="center">
 			<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/iwt.jpg" alt="Izrada web trgovina">
-			<h3>Izrada web trgovina</h3>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge/izrada-web-trgovina">
+			<h3>Izrada web trgovina</h3></a>
 			<p>Nudimo kompletno rješenje izrade responzivnih web trgovina koje možete potpuno sami ažurirati!</p>
-			<a href="#">Saznaj više...</a>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge/izrada-web-trgovina">Saznaj više...</a>
 		</div>
 		<div class="col-md-3 m-bot-marg-50" align="center">
 			<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/seo.jpg" alt="SEO analiza i optimizacija">
-			<h3>SEO analiza i optimizacija</h3>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge//seo-analiza-optimizacija">
+			<h3>SEO analiza i optimizacija</h3></a>
 			<p>Nudimo cjelovitu SEO analizu i optimizaciju web stranica ili trgovina za najbolje položaje na Google-u!</p>
-			<a href="#">Saznaj više...</a> 
+			<a href="<?= esc_url(get_site_url()); ?>/usluge//seo-analiza-optimizacija">Saznaj više...</a> 
 		</div>
 		<div class="col-md-3 m-bot-marg-50" align="center">
 			<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/diz.jpg" alt="Grafički dizajn">
-			<h3>Grafički dizajn</h3>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge/graficki-dizajn">
+			<h3>Grafički dizajn</h3></a>
 			<p>Grafički dizajn nošen na leđima IDEJA koje pristaju Vašem projektu!<br><br></p>
-			<a href="#">Saznaj više...</a>
+			<a href="<?= esc_url(get_site_url()); ?>/usluge/graficki-dizajn">Saznaj više...</a>
 		</div>
 	</div>
 	<div class="row top-marg-50 m-bot-marg-50">
@@ -34,7 +38,7 @@
 spremnih za poboljšanje vašeg poslovanja!</h3>
 			<hr align="left">
 			<p>Burza ideja djeluje od 2008. godine kao specijalizirana tvrtka za izradu i održavanje responzivnih web stranica i web trgovina, izradu SEO analiza i SEO optimizacije web stranica.</p>
-			<a href="#" class="hvr-icon-forward">Saznaj nešto više</a>
+			<a href="<?= esc_url(get_site_url()); ?>/o-nama" class="hvr-icon-forward">Saznaj nešto više</a>
 		</div>
 	</div>
 </div>
@@ -45,7 +49,7 @@ spremnih za poboljšanje vašeg poslovanja!</h3>
 			<hr>
 			<h3>Pošaljite nam upit, objasnite čime se bavite i što biste željeli<br> te ćemo Vam izraditi prikladnu neobvezujuću ponudu.</h3>
 		</div>
-		<div class="col-md-12" align="center"><a href="#" class="hvr-icon-forward">Zatražite ponudu</a></div>
+		<div class="col-md-12" align="center"><a href="<?= esc_url(get_site_url()); ?>/kontakt" class="hvr-icon-forward">Zatražite ponudu</a></div>
 	</div>
 </div>
 <div class="container-fluid bg-blue">
@@ -58,43 +62,42 @@ spremnih za poboljšanje vašeg poslovanja!</h3>
 			</div>
 		</div>
 		<div class="row top-marg-50">
-			<div class="col-md-4 m-bot-marg-50">
-				<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/projekti/3dental-thumb.jpg" class="img-responsive project-img">
-				<a href="#" class="project-more-plus"><i class="fa fa-plus" aria-hidden="true"></i></a> 
-				<a href="#" class="project-box-bot">3Dentall</a>
-			</div>
-			<div class="col-md-4 m-bot-marg-50">
-				<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/projekti/3dental-thumb.jpg" class="img-responsive">
-				<a href="#" class="project-more-plus"><i class="fa fa-plus" aria-hidden="true"></i></a>
-				<a href="#" class="project-box-bot">3Dentall</a>
-			</div>
-			<div class="col-md-4">
-				<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/projekti/3dental-thumb.jpg" class="img-responsive">
-				<a href="#" class="project-more-plus"><i class="fa fa-plus" aria-hidden="true"></i></a>
-				<a href="#" class="project-box-bot">3Dentall</a>
-			</div>
+			<?php $args = array ('post_type' => 'projekti', 'posts_per_page' => 3);
+				$loop = new WP_Query($args);
+				while ($loop->have_posts()) : $loop->the_post(); ?>
+				<div class="col-md-4 m-bot-marg-50">
+				<a href="<?php echo get_permalink(); ?>"><img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive project-img"></a>
+				<a href="<?php echo get_permalink(); ?>" class="project-more-plus"><i class="fa fa-plus" aria-hidden="true"></i></a> 
+				<a href="<?php echo get_permalink(); ?>" class="project-box-bot"><?php the_title(); ?></a>
+				</div>
+			<?php endwhile; ?>
 		</div>
-		<div class="col-md-12 top-marg-50" align="center"><a href="#" class="hvr-icon-forward">Svi projekti</a></div>
+		<div class="col-md-12 top-marg-50" align="center"><a href="<?= esc_url(get_site_url()); ?>/projekti" class="hvr-icon-forward">Svi projekti</a></div>
 	</div>
 </div>
 <div class="container-fluid bg-light-blue">
 	<div class="container top-marg-50 bottom-marg-50">
-		<div class="col-md-8 m-bot-marg-50">
-			<h2>Novo s našeg bloga</h2>
-			<hr align="left">
+		<?php
+		$args = array( 'posts_per_page' => 1 );
+		$lastposts = get_posts( $args );
+		foreach ( $lastposts as $post ) :
+		  setup_postdata( $post ); ?>
+			<div class="col-md-8 bottom-marg-50">
 			<ul class="blog-headline">
-				<li class="date-blog">09</li>
-				<li class="month-year-blog">LIP<br>2016</li>
-				<li class="title-blog-frontpage"><h3>Front-end development</h3></li>
+				<li class="date-blog"><?php echo get_the_date('d');?></li>
+				<li class="month-year-blog"><?php echo get_the_date('M');?><br><?php echo get_the_date('Y'); ?></li>
+				<li class="title-blog-frontpage"><a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a></li>
 			</ul>
 			<ul class="fa-list">
-				<li><i class="fa fa-user" aria-hidden="true"></i> Admin</li>
-				<li><i class="fa fa-folder" aria-hidden="true"></i> Marketing</li>
+				<li><i class="fa fa-folder" aria-hidden="true"></i> <?php the_category( ' ' ); ?></li>
 			</ul>
-			<img src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/blog/frontend-thumb.jpg" class="img-responsive">
-			<p>Front-end development je dio procesa izrade web stranice koji se odnosi na sve elemente dostupne krajnjem korisniku. Osoba koja se bavi tim poslom naziva se Front-end developer i odgovorna je za izradu svega vidljivog na web stranici, raspored elemenata, funkcionalnost i korisnički doživljaj (eng. User Experience – UX).</p>
-			<a href="#" class="hvr-icon-forward">Saznaj nešto više</a>
+			<a href="<?php the_permalink(); ?>">
+				<img src="<?php the_post_thumbnail_url(); ?>" class="img-responsive"></a>
+			<p><?= get_field( "bi_sazetak", $page->ID );?></p>
+			<a href="<?php the_permalink(); ?>" class="hvr-icon-forward">Pročitaj više</a>
 		</div>
+		<?php endforeach; 
+		wp_reset_postdata(); ?>
 		<div class="col-md-4">
 			<h2>Facebook aktivnosti</h2>
 			<hr align="left">

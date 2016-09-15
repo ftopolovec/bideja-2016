@@ -18,3 +18,8 @@
 	font-size:18px;
 	padding-bottom:10px;
 }
+@media screen and (max-width: 767px) {
+	.slider-content { margin-top:15px; }
+	.slider-image { display:none; }
+	.slider-content h3 { font-size:32px; }
+}

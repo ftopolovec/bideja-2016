@@ -1,4 +1,4 @@
-<div class="container-fluid bg-blue header-top">
+<div id="top" class="container-fluid bg-blue header-top">
   <div class="container ">
     <div class="col-md-2 slogan"><p>Samo trenutak, evo <span>ideje!</span></p></div>  
     <div class="col-md-6 col-md-offset-1">
@@ -14,7 +14,7 @@
     </div>
     <div class="col-md-2 no-padding">
       <ul class="header-top-cta fa-list">
-        <a href="#" target="_blank"><li>Zatražite ponudu <i class="fa fa-paper-plane-o" aria-hidden="true"></i></li></a>
+        <a href="<?= esc_url(get_site_url()); ?>/kontakt"><li>Zatražite ponudu <i class="fa fa-paper-plane-o" aria-hidden="true"></i></li></a>
       </ul>
     </div>
   </div>
@@ -29,7 +29,7 @@
         <span></span>
       </div>
         <!--<button data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>-->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="<?= esc_url(get_site_url()); ?>">
           <img alt="Brand" src="<?= esc_url(get_template_directory_uri ()); ?>/assets/images/burza-ideja-logo.svg">
         </a>
       </div>
@@ -37,7 +37,11 @@
         <nav role="navigation" class="navbar-collapse nav-primary">
           <?php
           if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+            wp_nav_menu([
+              'depth' => 2,
+              'container' => 'ul',
+              'theme_location' => 'primary_navigation', 
+              'menu_class' => 'nav navbar-nav' ]);
           endif;
           ?>
         </nav>

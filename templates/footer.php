@@ -29,8 +29,12 @@
 	    </div>
 	  </div>
 	</div>
+	<span><a data-scroll href="#top">Gore</a></span>
 </footer>
-
+<script src="dist/js/smooth-scroll.js"></script>
+<script>
+    smoothScroll.init();
+</script>
 <?php if(is_front_page()){ ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -40,4 +44,20 @@
   js.src = "//connect.facebook.net/hr_HR/sdk.js#xfbml=1&version=v2.7&appId=1543406099223777";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+ <script>
+	window.onblur = function () { document.title = 'Mi Vas čekamo | Burza Ideja'; }
+	window.onfocus = function () { document.title = 'Burza Ideja | Izrada i održavanje responzivnih web stranica te SEO usluge'; }
+
+console.log(`%c ________________________________________
+ ----------------------------------------
+ 
+██████╗ ██╗   ██╗██████╗ ███████╗ █████╗     ██╗██████╗ ███████╗     ██╗ █████╗ 
+██╔══██╗██║   ██║██╔══██╗╚══███╔╝██╔══██╗    ██║██╔══██╗██╔════╝     ██║██╔══██╗
+██████╔╝██║   ██║██████╔╝  ███╔╝ ███████║    ██║██║  ██║█████╗       ██║███████║
+██╔══██╗██║   ██║██╔══██╗ ███╔╝  ██╔══██║    ██║██║  ██║██╔══╝  ██   ██║██╔══██║
+██████╔╝╚██████╔╝██║  ██║███████╗██║  ██║    ██║██████╔╝███████╗╚█████╔╝██║  ██║
+╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝    ╚═╝╚═════╝ ╚══════╝ ╚════╝ ╚═╝  ╚═╝
+  ----------------------------------------                                                                                   
+       `, "font-family:monospace")
+</script>
 <?php } ?>

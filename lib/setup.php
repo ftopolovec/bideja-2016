@@ -79,14 +79,20 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
  */
 function display_sidebar() {
   static $display;
-
+  global $post;
   isset($display) || $display = !in_array(true, [
     // The sidebar will NOT be displayed if ANY of the following return true.
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
     is_page(7),
+    is_page(11),
+    is_page(55),
+    is_page(20),
+    is_archive(),
+    is_single(),
     is_page_template('template-custom.php'),
+    $post->post_parent == '55'
     ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -106,13 +112,7 @@ function assets() {
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
-
-
-
-
-
-
-// PROJEKTI
+// PROJEKTI CPT
 function ctp_projekti() {
 
   $labels = array(
@@ -141,3 +141,4 @@ function ctp_projekti() {
 
 }
 add_action( 'init', __NAMESPACE__ . '\\ctp_projekti', 0 );
+
