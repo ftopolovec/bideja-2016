@@ -3,27 +3,35 @@ body {
   position: relative;
 }
 h1 { 
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-family: 'Poppins', sans-serif;
+	color:#545454;
+	font-size:30px;
+	font-weight:700;
 }
 h2 {
-	font-family: 'Roboto', sans-serif;
-	font-size:36px;
-	font-weight:300;
+	font-family: 'Poppins', sans-serif;
+	color:#545454;
+	font-size:30px;
+	font-weight:700;
 }
-h3 { font-family: 'Raleway', sans-serif; }
+h3 { 
+	font-family: 'Poppins', sans-serif;
+	font-weight:400;
+}
 h4 { 
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
 	color: $gray;
 	line-height: 24px;
 }
 p { 
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
-	font-weight: 300;
+	line-height: 26px;
+	font-weight: 400;
 }
-a { color: $red;}
+a { color: $red; transition:all 0.3s ease;}
+a:focus { color: $saturate-blue;}
 a:hover { 
 	color:$blue-link !important;
 	text-decoration: none !important;
@@ -33,6 +41,7 @@ a:hover {
 	color: $saturate-blue;
 }
 .breadcrumb { 
+	background:url('../../assets/images/breadcrumb-pozadina.jpg') !important;
 	margin-bottom:0px; 
 	text-align: center;
 	padding:50px 0px 50px 0px;
@@ -41,27 +50,54 @@ a:hover {
 }
 .breadcrumb p {
 	font-family: Raleway,sans-serif;
-	color: #fff; 
+	color: $gray; 
 	font-size:18px;
 	font-weight:400;
 	line-height:28px;
 }
 .breadcrumb-title { 
-	color:#fff; 
+	color: $gray; 
 	margin-top:10px;
 	text-transform: uppercase;
 	font-weight:bold;
 }
-.breadcrumb a { color:#00b4fa; }
+.breadcrumb a { color: $red; }
 .no-padding { padding:0px; }
 .top-pad-50  { padding-top:50px; }
+.top-pad-100  { padding-top:100px; }
 .top-marg-50 { margin-top:50px;}
+.top-marg-100 { margin-top:100px;}
+.bottom-pad-50  { padding-bottom:50px; }
+.bottom-pad-100  { padding-bottom:100px; }
 .bottom-marg-50 { margin-bottom:50px;}
+.bottom-marg-100 { margin-bottom:100px;}
 .padding-50 { padding-top:50px !important; padding-bottom:50px; }
+.li-pad { padding-bottom:20px; }
 @media screen and (max-width: 768px) {
 	#owl-example { display: none; } 
 	.m-bot-marg-50 { margin-bottom:50px; }
 }
-
+/*
 img { filter: contrast(100%); transition:all 1s ease; }
 img:hover { filter: contrast(130%); }
+*/
+.relatedthumb { display:inline-block; }
+.ref-item { position:relative; overflow: hidden; }
+.ref-item img {
+  max-width: 100%;
+  
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.ref-item:hover img {
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+/*
+.ref-item:hover .project-more-plus {
+  -moz-transform: translate(-100px);
+  -webkit-transform: translate(-100px);
+  transform: translate(-100px);
+}*/

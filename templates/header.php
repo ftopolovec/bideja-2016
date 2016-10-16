@@ -1,10 +1,9 @@
 <div id="top" class="container-fluid bg-blue header-top">
-  <div class="container ">
-    <div class="col-md-2 slogan"><p>Samo trenutak, evo <span>ideje!</span></p></div>  
-    <div class="col-md-6 col-md-offset-1">
+  <div class="container "> 
+    <div class="col-md-9">
       <ul class="fa-list header-top-contact">
-        <li><i class="fa fa-phone" aria-hidden="true"></i> +385 95 910 9102 – Mladen</li>
-        <li><i class="fa fa-phone" aria-hidden="true"></i> +385 91 186 5265 – Josip</li>
+        <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@burza-ideja.hr"> info@burza-ideja.hr</a></li>
+        <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+385911865265"> +385 91 186 5265</a></li>
       </ul>
     </div>
     <div class="col-md-1 no-padding">

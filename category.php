@@ -8,7 +8,7 @@
   <p>Otvorili smo ovaj blog kako bi Vam približili teme i termine sa kojima ćete se sigurno susresti u komunikaciji sa stručnjacima iz područja izrade web stranica, SEO optimizacije i ostalih. </p>
   </div>
 </div>
-<div class="container-fluid bg-light-blue">
+<div class="container-fluid bg-light-gray">
 <div class="container top-marg-50 bottom-marg-50">
 		<?php
 		$args = array( 'posts_per_page' => 3 );

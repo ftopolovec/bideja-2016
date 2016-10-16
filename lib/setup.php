@@ -89,6 +89,7 @@ function display_sidebar() {
     is_page(11),
     is_page(55),
     is_page(20),
+    is_page(9),
     is_archive(),
     is_single(),
     is_page_template('template-custom.php'),
@@ -108,19 +109,23 @@ function assets() {
     wp_enqueue_script('comment-reply');
   }
 
+
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
+
+
+
 // PROJEKTI CPT
-function ctp_projekti() {
+function ctp_reference() {
 
   $labels = array(
-    'name'                  => _x( 'Projekti', 'Post Type General Name', 'text_domain' ),
-    'singular_name'         => _x( 'Projekt', 'Post Type Singular Name', 'text_domain' )
+    'name'                  => _x( 'Reference', 'Post Type General Name', 'text_domain' ),
+    'singular_name'         => _x( 'Referenca', 'Post Type Singular Name', 'text_domain' )
     );
   $args = array(
-    'label'                 => __( 'Projekt', 'text_domain' ),
+    'label'                 => __( 'Referenca', 'text_domain' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor', 'thumbnail', ),
     'taxonomies'            => array( 'category', 'post_tag' ),
@@ -137,8 +142,10 @@ function ctp_projekti() {
     'publicly_queryable'    => true,
     'capability_type'       => 'page',
     );
-  register_post_type( 'projekti', $args );
+  register_post_type( 'reference', $args );
 
 }
-add_action( 'init', __NAMESPACE__ . '\\ctp_projekti', 0 );
+add_action( 'init', __NAMESPACE__ . '\\ctp_reference', 0 );
+
+remove_action('wp_head', 'wp_generator');
 

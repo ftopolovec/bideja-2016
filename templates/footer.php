@@ -14,9 +14,10 @@
 	    	<div class="top-marg-50 bottom-marg-50"> 
 		    	<h3>Kontakt podaci</h3>
 		    	<hr align="left">
-		    	<p><i class="fa fa-home" aria-hidden="true"></i> Burza ideja d.o.o., Krapinska 9, 42000 Varaždin OIB: 60382139644<br>
-	 <i class="fa fa-phone" aria-hidden="true"></i> +385 95 910 9102 – Mladen  <i class="fa fa-phone" aria-hidden="true"></i> +385 91 186 5265 – Josip  
-	 <br><i class="fa fa-envelope-o" aria-hidden="true"></i> info@burza-ideja.hr</p>
+		    	<p><i class="fa fa-home" aria-hidden="true"></i> <b>Burza ideja d.o.o.</b>, Krapinska 9, 42000 Varaždin <b>OIB:</b> 60382139644<br>
+	 			<i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+385959109102"> +385 95 910 9102</a> – Mladen  
+	 			<br><i class="fa fa-phone" aria-hidden="true"></i> <a href="tel:+385911865265"> +385 91 186 5265</a> – Josip  
+	 		    <br><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:info@burza-ideja.hr"> info@burza-ideja.hr</a></p>
 	 			<h3>Prijava na Newsletter</h3>
 		    	<hr align="left">
 		    	 <div class="input-group">
@@ -29,19 +30,14 @@
 	    </div>
 	  </div>
 	</div>
-	<span><a data-scroll href="#top">Gore</a></span>
 </footer>
-<script src="dist/js/smooth-scroll.js"></script>
-<script>
-    smoothScroll.init();
-</script>
 <?php if(is_front_page()){ ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/hr_HR/sdk.js#xfbml=1&version=v2.7&appId=1543406099223777";
+  js.src = "//connect.facebook.net/hr_HR/sdk.js#xfbml=1&version=v2.7&appId=1042339335805882"; //1543406099223777
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
  <script>

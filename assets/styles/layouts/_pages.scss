@@ -4,13 +4,18 @@
  .text-center { text-align: center; }
  .bg-white { background: #fff; }
  .bg-green { background: $green; }  
+ .bg-light-gray { 
+ 	background: $light-gray; 
+ 	border-top:1px solid #f2f2f2;
+ 	border-bottom: 1px solid #f2f2f2;
+ 	}
  .bg-light-blue { color: $dark-blue; }
  .bg-light-blue hr, .bg-blue hr { 
  	width:50px; 
 	border-width:2px;
 	border-color: $blue-link; 
 }
-.bg-light-blue h3 {
+.bg-light-gray h3 {
 	color: $dark-blue; 
 	font-weight:400;
 	line-height:28px;
@@ -38,12 +43,17 @@
 	font-weight:400;
 	line-height:28px;
  }
- .bg-blue h3 {
+ .bg-blue h3, .bg-blue-sub {
 	color: $saturate-blue; 
 	font-size:18px;
 	font-weight:400;
 	line-height:28px;
 }
+.bg-light-blue-sub {
+	@extend .bg-blue-sub;
+	color: $dark-blue;
+}
+
  .bg-green hr, .bg-blue hr { 
  	width:50px; 
 	border-width:2px;
@@ -52,8 +62,8 @@
  .bg-blue { background: $dark-blue; }
  .bg-blue .fa { color: #fff; } 
  .bg-light-blue { background: $light-blue; }   
- .bg-light-blue .fa { color: $blue-link; }  
- .bg-light-blue .fa-list:before { display:none; } 
+ .bg-light-gray .fa { color: $blue-link; }  
+ .bg-light-gray .fa-list:before { display:none; } 
  .clients-wrapper img { 
  	filter: grayscale(100%);
  	transition:all 0.3s ease;
@@ -62,7 +72,7 @@
 .project-box-bot { 
 	display:block;
 	padding-top:20px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size:24px;
 	font-weight: 400;
 	color: $gray;
@@ -97,7 +107,7 @@
 	transform: rotate(180deg); 
 } 
 .title-blog-frontpage { font-size: 24px !important; }
-.blog-headline { padding:0px; border-bottom:2px solid #fff; }
+.blog-headline { padding:0px; border-bottom:2px solid $saturate-blue; }
 .blog-headline li {
 	display:inline-block;
 	padding:10px;
@@ -107,7 +117,7 @@
 	font-size:30px;
 	font-weight: bold;
 	color: $gray;
-	border-right:2px solid #fff;
+	border-right:2px solid $saturate-blue;
 }
 .month-year-blog {
 	font-family: 'Roboto', sans-serif;
@@ -117,24 +127,25 @@
 	text-align: center;
 	text-transform: uppercase;
 }
-.bg-light-blue .fa-list { padding:0px; }
-.bg-light-blue .fa-list a { color: #545454; }
-.bg-light-blue .fa-list li { display:inline-block; padding-right:10px; }
-.bg-light-blue .fa-list li span { color: $blue-link; }
-.bg-light-blue p { 
+.bg-light-gray .fa-list { padding:0px; }
+.bg-light-gray .fa-list a { color: #545454; }
+.bg-light-gray .fa-list li { display:inline-block; padding-right:10px; }
+.bg-light-gray .fa-list li span { color: $blue-link; }
+.bg-light-gray p { 
 	padding-top:20px;
-	color: $dark-blue;
+	color: $gray;
 	font-size:16px;
 }
 .services h3 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
 	font-weight: 600;
 }
 .services p {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	line-height: 26px;
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 400;
 }
 .services a {
 	color: $gray;
@@ -143,7 +154,8 @@
 	font-weight: 400;
 }
 .services a:hover { color: $red !important; }
-
+.services img { transition: all 0.3s ease-in-out; }
+.services img:hover { transform: scale(0.95); }
 /*********************************************************************
  ** HOMEPAGE UNDER SLIDER - MOBILE
  *********************************************************************/ 
@@ -154,6 +166,20 @@
  /*********************************************************************
  ** O NAMA
  *********************************************************************/ 
+ .team .col-md-3 { 
+ 	border:1px solid #eeeeee;
+ 	padding-top:20px;
+ 	transition:all 0.3s ease;
+ }
+  .team .col-md-3:hover { 
+ 	box-shadow: 0 3px 2px 2px rgba(0,0,0,0.2);
+ }
+ .team .fa { 
+ 	padding-top:15px;
+ 	font-size:18px;
+ }
+ .team a { width:48px; height:48px; display:inline-block; }
+ .video { width:100%; height:380px; }
   /*********************************************************************
  ** USLUGE
  *********************************************************************/ 
@@ -162,6 +188,20 @@
 	bottom:25px; 
 	left:25%;
 }
+.sidebar h3 { 
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $gray;
+}
+.sidebar ul { padding:0px; }
+.sidebar ul li {
+	list-style: none;
+	font-size: 18px;
+}
+.sidebar ul li a { 
+	color: $gray;
+}
+.sidebar ul .current-menu-item a { color: $red; }
  .or-spacer {
   margin-top:0px; margin-left:100px; width:100%; 
   position:relative; 
@@ -177,3 +217,23 @@
     }
   }
 }
+#menu-usluge { padding: 20px 20px 20px 0px; margin:0px; float:right;}
+#menu-usluge>li { 
+	display: inline-block; 
+	font-size:16px;
+	font-family: 'Poppins', sans-serif;
+	font-weight:700;
+}
+#menu-usluge>.current-menu-item a { color: $red; }
+#menu-usluge>li a { color: #9d9d9d; }
+#menu-usluge>li a:hover { color: $gray !important;}
+  /*********************************************************************
+ ** KONTAKT
+ *********************************************************************/ 
+ .kontakt>ul>li { 
+ 	font-family: 'Poppins', sans-serif;
+ 	font-size: 16px;
+ 	list-style: none; 
+ 	color: $gray;
+ }
+ .kontakt>ul { padding:0px; }

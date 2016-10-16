@@ -3,7 +3,8 @@
     "main.js": {
       "files": [
         "scripts/main.js",
-        "scripts/owl/*"
+        "scripts/owl/*",
+        "scripts/customizer.js"
       ],
       "main": true
     },

@@ -32,7 +32,11 @@ header {
     width: 100%;
     min-height:100px !important;
 }
-.nav-reposition { top: 0px !important; }
+.header-top a { color: #fff; }
+.nav-reposition { 
+  top: 0px !important;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06),0 4px 5px 0 rgba(0,0,0,0.06),0 1px 10px 0 rgba(0,0,0,0.08);
+}
 .nav-up { top:-100px !important; }
 
     /*********************************************************************
@@ -98,33 +102,34 @@ header {
   display: inline; 
   color:#cacaca;  
   padding-right:20px;
-  font-size:12px;
+  font-size:14px;
 }
+.header-top-contact a { color:rgba(255,255,255,0.7); }
+.header-top-contact a:hover { color:rgba(255,255,255,1) !important; }
 .header-top-social, .header-top-cta { padding:0px; }
 .header-top-social.fa-list:before, .header-top-cta.fa-list:before { display:none; }
 .header-top-social li { 
   height:46px;
-  border-left:solid 1px $saturate-blue; 
-  border-right:solid 1px $saturate-blue;
   padding: 12px 10px 0px 15px;
   list-style: none;
   text-align: center;
   transition: all 0.3s ease;
   color:#fff;
 }
-.header-top-social li:hover { background: $blue-link; }
+.header-top-social li:hover { background: $saturate-blue; }
 .header-top-social li a:hover,
 .header-top-cta li a:hover { text-decoration: none !important; } 
-
+ 
 .header-top-cta li { 
   height:46px;
   padding: 12px 10px 0px 15px;
-  background: $saturate-blue;
+  background: $green;
   list-style: none;
   text-align: center;
   color:#fff;
   transition: all 0.3s ease; 
 }
+.header-top-cta li:hover { background: $light-green; }
 .header-top-cta.fa-list span{ padding-left: 10px; }
 /*********************************************************************
  ** PRIVREMENO RJEŠENJE ZA PROBLEM S RESPONZIVNOSTI HEADER TOP
